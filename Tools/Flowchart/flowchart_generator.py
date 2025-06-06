@@ -14,6 +14,7 @@ def extract_keywords(text, top_n=5):
     keywords = kw_model.extract_keywords(text, keyphrase_ngram_range=(1, 2), stop_words='english', top_n=top_n)
     return [kw[0] for kw in keywords]
 
+
 # 2. Relationship Extraction using AllenNLP
 def extract_relationships(summary):
     predictor = Predictor.from_path(
